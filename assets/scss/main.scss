@@ -1,0 +1,104 @@
+@import "_general.scss";
+@import "_mixin.scss";
+@import "_variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Open+Sans:wght@300;400&display=swap");
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: "Libre Caslon Display", serif;
+  color: #000;
+}
+
+header {
+  padding: 2% 6%;
+  border-bottom: 2px solid $farbe-hell;
+  h1 {
+    font-size: 4rem;
+  }
+  ul {
+    @include flexIt;
+    margin: 2%;
+    color: $farbe-grau;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+}
+
+section {
+  margin: 5%;
+}
+
+.homeSection {
+  @include flexColumn;
+  padding: 0 12%;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 4%;
+  }
+}
+
+.optionsSection {
+  padding: 0 9%;
+  h2 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+  .containerFlexWrap {
+    @include flexWrapCenter;
+
+    article {
+      width: 40%;
+      h3 {
+        margin: 7% 0 6% 0;
+        letter-spacing: 5px;
+      }
+      p{
+        padding-bottom:4%;
+      }
+    }
+  }
+}
+
+.getStartedButton {
+  background-color: $farbe-grau;
+  border-radius:3px;
+  border:1px solid $farbe-grau;
+  display: block;
+  margin: 2% auto;
+  text-align: center;
+  width: 55%;
+  color: $farbe-weiss;
+  font-family: "Libre Caslon Display", serif;
+  letter-spacing:5px;
+  padding:1%;
+}
+.getStartedButton:hover{
+  background-color: $farbe-weiss;
+  color:$farbe-schwarz;
+}
+
+.termsSection {
+  margin-bottom: 2%;
+  padding:0 5%; 
+  img {
+    width: 100%;
+  }
+  article p {
+    text-align: left;
+    padding-top:5%;
+  }
+}
+
+footer .footerNav ul{
+  font-family: "Libre Caslon Display", serif;
+ 
+  @include flexIt;  
+  justify-content: flex-start;
+  background-color: $farbe-hell;
+  li{
+    padding:3% 8%;
+  }
+}
